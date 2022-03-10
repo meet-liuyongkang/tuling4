@@ -22,24 +22,3 @@ public class TestLazyClassLoader {
     }
 
 }
-
-
-class TestA{
-    static {
-        System.out.println("加载了TestA");
-    }
-    public TestA(){
-        System.out.println("初始化了TestA");
-    }
-
-}
-
-
-class TestB{
-    static {
-        System.out.println("加载了TestB");
-    }
-    public TestB(){
-        System.out.println("初始化了TestB");
-    }
-}

@@ -2,7 +2,6 @@ package com.tuling.jvm;
 
 import com.sun.crypto.provider.DESKeyFactory;
 import sun.misc.Launcher;
-import sun.misc.URLClassPath;
 
 import java.net.URL;
 
@@ -45,7 +44,7 @@ public class TestJdkClassLoader {
 
         System.out.println("引导类加载器的路径");
         URL[] urLs = Launcher.getBootstrapClassPath().getURLs();
-        for (URL url : urLs){
+        for (URL url : urLs) {
             System.out.println(url);
         }
 
