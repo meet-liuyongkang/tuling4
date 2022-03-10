@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Redis" />
         <module name="jvm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jvm" target="1.5" />
+      <module name="Redis" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
