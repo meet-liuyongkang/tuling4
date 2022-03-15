@@ -1,4 +1,4 @@
-package com.tuling.redis;
+package com.tuling.redis.jedis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.
- * @description
+ * @description jedis 连接单台Redis
  * @date 2022/3/10 2:49 下午
  */
 public class JedisSingleTest {
@@ -23,7 +23,7 @@ public class JedisSingleTest {
         jedisPoolConfig.setMinIdle(5);
 
         //构建连接池对象
-        JedisPool jedisPool = new JedisPool(jedisPoolConfig, "192.168.254.104", 6379, 3000, null);
+        JedisPool jedisPool = new JedisPool(jedisPoolConfig, "192.168.254.104", 6379, 3000, "jiangyue");
 
         //从连接池中拿出一个连接对象
         Jedis jedis = null;

@@ -1,4 +1,4 @@
-package com.tuling.redis;
+package com.tuling.redis.jedis;
 
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
@@ -10,7 +10,7 @@ import java.util.Set;
 
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.
- * @description
+ * @description jedis 连接Redis哨兵模式
  * @date 2022/3/10 6:04 下午
  */
 public class JedisSentinelTest {
