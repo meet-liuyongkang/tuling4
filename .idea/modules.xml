@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Redis/Redis.iml" filepath="$PROJECT_DIR$/Redis/Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/jvm/jvm.iml" filepath="$PROJECT_DIR$/jvm/jvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tuling4.iml" filepath="$PROJECT_DIR$/.idea/tuling4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/zookeeper/zookeeper.iml" />
     </modules>
   </component>
 </project>
