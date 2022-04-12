@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/jvm/pom.xml" />
         <option value="$PROJECT_DIR$/Redis/pom.xml" />
         <option value="$PROJECT_DIR$/zookeeper/pom.xml" />
+        <option value="$PROJECT_DIR$/javaBase/pom.xml" />
+        <option value="$PROJECT_DIR$/javaConcurrent/pom.xml" />
       </list>
     </option>
   </component>

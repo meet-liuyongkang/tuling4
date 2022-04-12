@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Redis/Redis.iml" filepath="$PROJECT_DIR$/Redis/Redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaBase/javaBase.iml" filepath="$PROJECT_DIR$/javaBase/javaBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaConcurrent/javaConcurrent.iml" filepath="$PROJECT_DIR$/javaConcurrent/javaConcurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/jvm/jvm.iml" filepath="$PROJECT_DIR$/jvm/jvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tuling4.iml" filepath="$PROJECT_DIR$/.idea/tuling4.iml" />
       <module fileurl="file://$PROJECT_DIR$/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/zookeeper/zookeeper.iml" />

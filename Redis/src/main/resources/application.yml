@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: cluster
+    active: single
 
 server:
   port: 8080
@@ -13,9 +13,8 @@ spring:
   redis:
     database: 0
     timeout: 3000
-    host: 192.168.254.104
+    host: 192.168.254.101
     port: 6379
-    password: jiangyue
 
     lettuce:
       pool:
