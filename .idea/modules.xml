@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RabbitMQ/RabbitMQ.iml" filepath="$PROJECT_DIR$/RabbitMQ/RabbitMQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/Redis/Redis.iml" filepath="$PROJECT_DIR$/Redis/Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaBase/javaBase.iml" filepath="$PROJECT_DIR$/javaBase/javaBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaConcurrent/javaConcurrent.iml" filepath="$PROJECT_DIR$/javaConcurrent/javaConcurrent.iml" />
