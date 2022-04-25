@@ -15,10 +15,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="javaBase" target="1.5" />
+      <module name="javaBase" target="8" />
       <module name="javaConcurrent" target="1.8" />
       <module name="jvm" target="1.5" />
-      <module name="RabbitMQ" target="8" />
+      <module name="RabbitMQ" target="1.8" />
       <module name="Redis" target="1.8" />
       <module name="zookeeper" target="1.8" />
     </bytecodeTargetLevel>
