@@ -15,7 +15,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="javaBase" target="8" />
+      <module name="javaBase" target="1.5" />
       <module name="javaConcurrent" target="1.8" />
       <module name="jvm" target="1.5" />
       <module name="RabbitMQ" target="1.8" />
@@ -25,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="RabbitMQ" options="-parameters" />
       <module name="Redis" options="-parameters" />
       <module name="javaConcurrent" options="-parameters" />
       <module name="zookeeper" options="-parameters" />

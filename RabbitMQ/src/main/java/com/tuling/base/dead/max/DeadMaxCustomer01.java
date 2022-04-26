@@ -1,4 +1,4 @@
-package com.tuling.base.publish.direct;
+package com.tuling.base.dead.max;
 
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
@@ -11,30 +11,38 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.
- * @description 工作队列模式-消费者01
- * @date 2022/4/19 4:20 下午
+ * @description 死信队列 - 普通队列消费者
+ * @date 2022/4/26 9:50 上午
  */
-public class DirectCustomer01 {
-
+public class DeadMaxCustomer01 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         Channel channel = ConnectionUtil.getChannel();
 
+        channel.basicQos(5);
+
         DeliverCallback deliverCallback = new DeliverCallback() {
             @Override
             public void handle(String consumerTag, Delivery message) throws IOException {
-                System.out.println("消费者01-收到消息: consumerTag=" + consumerTag + ",  body=" + new String(message.getBody()));
+                try {
+                    Thread.sleep(3 * 1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(this.getClass().getSimpleName() + "消费消息：" + new String(message.getBody()));
+
+                channel.basicAck(message.getEnvelope().getDeliveryTag(), false);
             }
         };
 
         CancelCallback cancelCallback = new CancelCallback() {
             @Override
             public void handle(String consumerTag) throws IOException {
-
+                System.out.println(this.getClass().getSimpleName() + "取消订阅，consumerTag = " + consumerTag);
             }
         };
 
-        channel.basicConsume(DirectProducer.QUEUE_NAME01, false, deliverCallback, cancelCallback);
+        channel.basicConsume(DeadMaxProducer.MAX_NORMAL_QUEUE, false, deliverCallback, cancelCallback);
     }
 
 }
