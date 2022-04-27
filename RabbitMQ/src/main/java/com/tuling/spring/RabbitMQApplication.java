@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description
  * @date 2022/4/26 5:49 下午
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.tuling.spring.backup"})
 public class RabbitMQApplication {
     public static void main(String[] args) {
         SpringApplication.run(RabbitMQApplication.class, args);
