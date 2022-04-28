@@ -27,16 +27,16 @@ public class DirectProducer {
     private static String EXCHANGE_NAME = "MyDirectExchange";
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        Channel channel = ConnectionUtil.getChannel();
+        Channel channel = ConnectionUtil.getProxyChannel();
 
         //声明一个交换机
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.DIRECT);
 
         //声明一个队列
-        channel.queueDeclare(QUEUE_NAME01, false, false, true, null);
+        channel.queueDeclare(QUEUE_NAME01, false, false, false, null);
 
         //声明一个队列
-        channel.queueDeclare(QUEUE_NAME02, false, false, true, null);
+        channel.queueDeclare(QUEUE_NAME02, false, false, false, null);
 
         //绑定交换机和队列
         channel.queueBind(QUEUE_NAME01, EXCHANGE_NAME, ROUTING_KEY01);

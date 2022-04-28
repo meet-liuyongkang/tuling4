@@ -18,7 +18,7 @@ public class DirectCustomer01 {
 
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        Channel channel = ConnectionUtil.getChannel();
+        Channel channel = ConnectionUtil.getProxyChannel();
 
         DeliverCallback deliverCallback = new DeliverCallback() {
             @Override
@@ -34,7 +34,7 @@ public class DirectCustomer01 {
             }
         };
 
-        channel.basicConsume(DirectProducer.QUEUE_NAME01, false, deliverCallback, cancelCallback);
+        channel.basicConsume(DirectProducer.QUEUE_NAME01, true, deliverCallback, cancelCallback);
     }
 
 }
