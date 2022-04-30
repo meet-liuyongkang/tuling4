@@ -36,6 +36,7 @@ public class QosCustomer01 {
 
         //消费消息的回调接口
         DeliverCallback deliverCallback = new DeliverCallback() {
+            @Override
             public void handle(String consumerTag, Delivery message) throws IOException {
                 try {
                     Thread.sleep(2 * 1000);
@@ -57,6 +58,7 @@ public class QosCustomer01 {
 
         //取消消息的回调接口，除了调用 channel.basicCancel 方法取消订阅，其他任何形式取消订阅，都会回调此接口
         CancelCallback cancelCallback = new CancelCallback() {
+            @Override
             public void handle(String consumerTag) throws IOException {
                 System.out.println("取消了消息回调：" + consumerTag);
             }

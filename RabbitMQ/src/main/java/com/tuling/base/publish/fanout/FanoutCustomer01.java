@@ -20,12 +20,14 @@ public class FanoutCustomer01 {
         Channel channel = ConnectionUtil.getChannel();
 
         DeliverCallback deliverCallback = new DeliverCallback() {
+            @Override
             public void handle(String consumerTag, Delivery message) throws IOException {
                 System.out.println(this.getClass().getSimpleName()+"收到队列（"+ FanoutProducer.QUEUE_NAME01+"）消息: consumerTag=" + consumerTag + ",  body=" + new String(message.getBody()));
             }
         };
 
         CancelCallback cancelCallback = new CancelCallback() {
+            @Override
             public void handle(String consumerTag) throws IOException {
 
             }

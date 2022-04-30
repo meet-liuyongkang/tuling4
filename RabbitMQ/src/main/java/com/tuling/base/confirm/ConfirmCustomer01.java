@@ -21,12 +21,14 @@ public class ConfirmCustomer01 {
 
         // 消费消息的回调接口
         final DeliverCallback deliverCallback = new DeliverCallback() {
+            @Override
             public void handle(String consumerTag, Delivery message) throws IOException {
                 System.out.println(this.getClass().getSimpleName() + "接收消息：" + new String(message.getBody()));
             }
         };
 
         CancelCallback cancelCallback = new CancelCallback() {
+            @Override
             public void handle(String consumerTag) throws IOException {
                 System.out.println("调用了取消回调接口：" + consumerTag);
             }

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.
- * @description  死信队列 - TTL过期
+ * @description  死信队列 - nack,消息被拒绝
  * @date 2022/4/26 9:50 上午
  */
 public class DeadNAckProducer {

@@ -21,12 +21,14 @@ public class TopicCustomer03 {
         Channel channel = ConnectionUtil.getChannel();
 
         DeliverCallback deliverCallback = new DeliverCallback() {
+            @Override
             public void handle(String consumerTag, Delivery message) throws IOException {
                 System.out.println(this.getClass().getSimpleName()+"收到（"+ TopicProducer.QUEUE_NAME0305+"）消息: consumerTag=" + consumerTag + ",  body=" + new String(message.getBody()));
             }
         };
 
         CancelCallback cancelCallback = new CancelCallback() {
+            @Override
             public void handle(String consumerTag) throws IOException {
 
             }

@@ -40,6 +40,7 @@ public class SimpleCustomer {
 
         //消费消息的回调接口
         DeliverCallback deliverCallback = new DeliverCallback() {
+            @Override
             public void handle(String consumerTag, Delivery message) throws IOException {
                 System.out.println("消费者收到消息: consumerTag=" + consumerTag + ",  body=" + new String(message.getBody()));
             }
@@ -47,6 +48,7 @@ public class SimpleCustomer {
 
         //取消消息的回调接口，除了调用 channel.basicCancel 方法取消订阅，其他任何形式取消订阅，都会回调此接口
         CancelCallback cancelCallback = new CancelCallback() {
+            @Override
             public void handle(String consumerTag) throws IOException {
                 System.out.println("取消了消息回调：" + consumerTag);
             }
