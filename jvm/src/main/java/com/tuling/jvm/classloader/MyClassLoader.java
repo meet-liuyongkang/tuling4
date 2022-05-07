@@ -1,4 +1,4 @@
-package com.tuling.jvm;
+package com.tuling.jvm.classloader;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class MyClassLoader extends ClassLoader {
                         c = getParent().loadClass(name);
                     } else {
                         //如果没有父加载器，则自己加载
-                        c = findLoadedClass(name);
+                        c = findClass(name);
                     }
                 } catch (ClassNotFoundException e) {
                     // ClassNotFoundException thrown if class not found
