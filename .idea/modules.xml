@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Nginx/Nginx.iml" filepath="$PROJECT_DIR$/Nginx/Nginx.iml" />
       <module fileurl="file://$PROJECT_DIR$/RabbitMQ/RabbitMQ.iml" filepath="$PROJECT_DIR$/RabbitMQ/RabbitMQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/Redis/Redis.iml" filepath="$PROJECT_DIR$/Redis/Redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaBase/javaBase.iml" filepath="$PROJECT_DIR$/javaBase/javaBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaConcurrent/javaConcurrent.iml" filepath="$PROJECT_DIR$/javaConcurrent/javaConcurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/jvm/jvm.iml" filepath="$PROJECT_DIR$/jvm/jvm.iml" />

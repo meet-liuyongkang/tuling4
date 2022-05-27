@@ -6,19 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Redis" />
         <module name="RabbitMQ" />
         <module name="javaConcurrent" />
         <module name="jvm" />
-        <module name="Redis" />
+        <module name="algorithm" />
         <module name="Nginx" />
         <module name="zookeeper" />
         <module name="javaBase" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="javaBase" target="1.5" />
+      <module name="algorithm" target="1.8" />
+      <module name="javaBase" target="1.8" />
       <module name="javaConcurrent" target="1.8" />
-      <module name="jvm" target="1.5" />
+      <module name="jvm" target="1.8" />
       <module name="Nginx" target="1.8" />
       <module name="RabbitMQ" target="1.8" />
       <module name="Redis" target="1.8" />
