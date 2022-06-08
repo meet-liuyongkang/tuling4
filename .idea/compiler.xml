@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Redis" />
-        <module name="RabbitMQ" />
-        <module name="javaConcurrent" />
         <module name="jvm" />
-        <module name="algorithm" />
+        <module name="RabbitMQ" />
         <module name="Nginx" />
         <module name="zookeeper" />
         <module name="javaBase" />
+        <module name="Redis" />
+        <module name="javaConcurrent" />
+        <module name="algorithm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
