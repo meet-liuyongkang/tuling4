@@ -1,9 +1,10 @@
 package com.tuling.nio.bio.version3;
 
 import java.io.DataInputStream;
-import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author liuyongkang
@@ -24,24 +25,31 @@ public class BioServer31 {
         // 1.创建一个socket服务端
         ServerSocket serverSocket = new ServerSocket(8080);
 
+        List<Socket> socketList = new ArrayList<>();
+
         while (true) {
             // 2.阻塞并等待客户端连接
+            // 假设不阻塞
             Socket socket = serverSocket.accept();
             System.out.println("连接成功：" + socket.toString());
 
-            new Thread(()->{
-                try {
-                    // 3.阻塞并等待读取客户端发送的数据
-                    while (true) {
-                        DataInputStream dis = new DataInputStream(socket.getInputStream());
-                        if (dis.available() > 0) {
-                            System.out.println("收到消息：" + dis.readUTF());
-                        }
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
+            if(socket == null){
+                System.out.println("等待连接");
+            } else {
+                socketList.add(socket);
+            }
+
+            for (Socket socket1 : socketList){
+                // 假设不阻塞
+                DataInputStream dis = new DataInputStream(socket1.getInputStream());
+                if (dis.available() > 0) {
+                    System.out.println("收到消息：" + dis.readUTF());
                 }
-            }).start();
+                if(!socket1.isConnected()){
+                    socketList.remove(socket1);
+                }
+            }
+
 
         }
 

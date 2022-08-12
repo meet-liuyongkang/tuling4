@@ -12,7 +12,7 @@ import java.net.Socket;
  * 存在的问题：
  * 1.socket处理一次就会丢失
  */
-public class NioServer01 {
+public class SelfNioServer01 {
 
     @SuppressWarnings("all")
     public static void main(String[] args) throws Exception {
