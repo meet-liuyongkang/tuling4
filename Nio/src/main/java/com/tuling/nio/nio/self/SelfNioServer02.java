@@ -26,7 +26,6 @@ public class SelfNioServer02 {
         ServerSocket serverSocket = new ServerSocket(8080);
 
         while (true) {
-            // 2.阻塞并等待客户端连接
             //TODO 假设这里不再阻塞
             Socket acceptSocket = serverSocket.accept();
 
